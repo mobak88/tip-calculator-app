@@ -75,20 +75,4 @@ select {
 
 html {
   font-size: 62.5%;
-
-  @include responsive(tab-land) {
-    font-size: 60%;
-  }
-
-  @include responsive(tab-port) {
-    font-size: 57.5%;
-  }
-
-  @include responsive(phone) {
-    font-size: 55%;
-  }
-
-  @include responsive(small-phone) {
-    font-size: 52.5%;
-  }
 }

@@ -8,6 +8,8 @@ const clearOuptutBtn = document.querySelector('.main__output-btn');
 const billErrMsg = document.getElementsByClassName('main__input-err-msg')[0];
 const numberOfPeopleErrMsg = document.getElementsByClassName('main__input-err-msg')[1];
 
+console.log(tipBtn);
+
 const calculateTip = (input) => {
     const calculatedTipAmount = `${(input * bill.value / 100)}`;
     tipAmount.textContent = `$${parseFloat(calculatedTipAmount / numberOfPeople.value).toFixed(2)}`;
@@ -18,7 +20,13 @@ const calculateTotal = (input) => {
     total.textContent = `$${parseFloat(calculatedTotal / numberOfPeople.value).toFixed(2)}`;
 };
 
-tipBtn.forEach((btn) => {
+const removeActiveBtn = () => {
+    tipBtn.forEach(btn => {
+        btn.classList.remove('main__tip-btn--active');
+    });
+};
+
+tipBtn.forEach((btn, i) => {
     const newBtn = btn.textContent.trim().slice(0, -1);
 
     btn.addEventListener('click', (e) => {
@@ -43,6 +51,8 @@ tipBtn.forEach((btn) => {
         }
 
         if (parseInt(bill.value) !== 0 && bill.value !== '' && parseInt(numberOfPeople.value) !== 0 && numberOfPeople.value !== '') {
+            removeActiveBtn();
+            document.getElementsByClassName('main__tip-btn')[i].classList.add('main__tip-btn--active');
             calculateTip(newBtn);
             calculateTotal(newBtn);
         }
@@ -78,6 +88,7 @@ tipAmountCustom.addEventListener('keyup', (e) => {
     }
 
     if (parseInt(bill.value) !== 0 && bill.value !== '' && parseInt(numberOfPeople.value) !== 0 && numberOfPeople.value !== '' && parseInt(tipAmountCustom.value) !== 0 && tipAmountCustom.value !== '') {
+        removeActiveBtn();
         calculateTip(tipAmountCustom.value);
         calculateTotal(tipAmountCustom.value);
     }
