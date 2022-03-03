@@ -240,7 +240,7 @@ footer {
 .main__input-icon {
   width: 1.2rem;
   position: absolute;
-  top: 4.7rem;
+  top: 4.8rem;
   left: 2rem;
 }
 
@@ -396,6 +396,14 @@ footer {
 
 .main__output-btn:hover {
   background-color: #c5e4e7;
+}
+
+.success {
+  border: 0.3rem solid #26c0ab;
+}
+
+.err {
+  border: 0.3rem solid #e17456;
 }
 
 .attribution {
