@@ -167,7 +167,7 @@ footer {
 }
 
 .main__form-left {
-  width: 95%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,6 +295,10 @@ footer {
 
 .main__tip-btn {
   background-color: #00494d;
+}
+
+.main__tip-btn--active {
+  background-color: #26c0ab;
 }
 
 .main__tip-btn:hover {

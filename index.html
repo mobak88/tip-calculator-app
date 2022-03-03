@@ -10,6 +10,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="/styles/main.css" />
+    <script src="./script/script.js" defer></script>
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -19,71 +20,69 @@
       </div>
 
       <div class="main__card">
-        <form class="main__form">
-          <div class="main__form-left">
-            <div class="main__input-column">
-              <div class="main__input-label-container">
-                <label for="bill" class="main__label">Bill</label>
-                <p class="main__input-err-msg main__input-err-msg--hidden">
-                  Can't be zero
-                </p>
-              </div>
-              <input
-                id="bill"
-                type="number"
-                placeholder="0"
-                class="main__input-field main__input-field--err main__input-field--success"
-              />
-              <img
-                src="/images/icon-dollar.svg"
-                alt=""
-                class="main__input-icon"
-              />
+        <div class="main__form-left">
+          <div class="main__input-column">
+            <div class="main__input-label-container">
+              <label for="bill" class="main__label">Bill</label>
+              <p class="main__input-err-msg main__input-err-msg--hidden">
+                Can't be zero
+              </p>
             </div>
-            <div class="main__select-tip-container">
-              <div class="main__tip-heading-container">
-                <p class="main__tip-heading">Select Tip %</p>
-              </div>
-              <div class="main__tip-btns-container">
-                <div class="main__tip-btns-container--column">
-                  <button class="main__tip-btn">5%</button>
-                  <button class="main__tip-btn">10%</button>
-                  <button class="main__tip-btn">15%</button>
-                </div>
-                <div class="main__tip-btns-container--column">
-                  <button class="main__tip-btn">25%</button>
-                  <button class="main__tip-btn">50%</button>
-                  <input
-                    type="text"
-                    placeholder="custom"
-                    class="main__tip-input"
-                  />
-                </div>
-              </div>
+            <input
+              id="bill"
+              type="number"
+              placeholder="0"
+              class="main__input-field"
+            />
+            <img
+              src="/images/icon-dollar.svg"
+              alt=""
+              class="main__input-icon"
+            />
+          </div>
+          <div class="main__select-tip-container">
+            <div class="main__tip-heading-container">
+              <p class="main__tip-heading">Select Tip %</p>
             </div>
-            <div class="main__input-column">
-              <div class="main__input-label-container">
-                <label for="number-of-people" class="main__label"
-                  >Number of People</label
-                >
-                <p class="main__input-err-msg main__input-err-msg--hidden">
-                  Can't be zero
-                </p>
+            <div class="main__tip-btns-container">
+              <div class="main__tip-btns-container--column">
+                <button class="main__tip-btn main__tip-btn--active">5%</button>
+                <button class="main__tip-btn">10%</button>
+                <button class="main__tip-btn">15%</button>
               </div>
-              <input
-                id="number-of-people"
-                type="number"
-                placeholder="0"
-                class="main__input-field main__input-field--err main__input-field--success"
-              />
-              <img
-                src="/images/icon-person.svg"
-                alt=""
-                class="main__input-icon"
-              />
+              <div class="main__tip-btns-container--column">
+                <button class="main__tip-btn">25%</button>
+                <button class="main__tip-btn">50%</button>
+                <input
+                  type="text"
+                  placeholder="custom"
+                  class="main__tip-input"
+                />
+              </div>
             </div>
           </div>
-        </form>
+          <div class="main__input-column">
+            <div class="main__input-label-container">
+              <label for="number-of-people" class="main__label"
+                >Number of People</label
+              >
+              <p class="main__input-err-msg main__input-err-msg--hidden">
+                Can't be zero
+              </p>
+            </div>
+            <input
+              id="number-of-people"
+              type="number"
+              placeholder="0"
+              class="main__input-field"
+            />
+            <img
+              src="/images/icon-person.svg"
+              alt=""
+              class="main__input-icon"
+            />
+          </div>
+        </div>
 
         <div class="main__output-card">
           <div class="main__output-container">
