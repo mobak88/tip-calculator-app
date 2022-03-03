@@ -1,0 +1,223 @@
+body {
+  background-color: $light-cyan;
+  min-height: 100vh;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 9rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16.3rem;
+  gap: 8.8rem;
+
+  &__logo {
+    width: 8.7rem;
+  }
+
+  &__card {
+    width: 92rem;
+    min-height: 50rem;
+    background-color: $white;
+    border-radius: 2.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__form-left {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__input-column {
+    position: relative;
+  }
+
+  &__input-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__label,
+  &__tip-heading {
+    font-size: $font-size;
+    color: $dark-cyan;
+  }
+
+  &__input-field {
+    background-color: $light-grayish-cyan;
+    padding: 0.9rem 1.7rem;
+    border: none;
+    color: $dark-grayish-cyan;
+    text-align: right;
+    color: $very-dark-cyan;
+    border-radius: 0.5rem;
+
+    &--success {
+      border: 0.3rem solid $strong-cyan;
+    }
+
+    &--err {
+      border: 0.3rem solid $error;
+    }
+
+    &::placeholder {
+      color: $dark-grayish-cyan;
+    }
+
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__input-icon {
+    width: 1.2rem;
+    position: absolute;
+    top: 4.7rem;
+    left: 2rem;
+  }
+
+  &__input-label-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__select-tip-container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+  }
+
+  &__tip-btns-container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    &--column {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__tip-btn,
+  &__tip-input {
+    color: $white;
+    border: none;
+    font-size: 2.4rem;
+    width: 30%;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0;
+  }
+
+  &__tip-btn {
+    background-color: $very-dark-cyan;
+
+    &:hover {
+      background-color: $light-cyan;
+      color: $very-dark-cyan;
+    }
+  }
+
+  &__tip-input {
+    background-color: $light-grayish-cyan;
+    text-align: center;
+    color: $very-dark-cyan;
+  }
+
+  &__tip-btn,
+  &__tip-input,
+  &__label {
+    cursor: pointer;
+  }
+
+  &__output-card {
+    background-color: $very-dark-cyan;
+    width: 41.5rem;
+    height: 42.5rem;
+    border-radius: 1.5rem;
+    padding: 5.6rem 4rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__input-err-msg {
+    color: $error;
+    font-size: $font-size;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__output-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.1rem;
+  }
+
+  &__output-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__output-paragraph {
+    color: $white;
+    font-size: $font-size;
+  }
+
+  &__output-person {
+    font-size: 1.3rem;
+    color: $dark-cyan;
+  }
+
+  &__output-number {
+    font-size: 4.8rem;
+    color: $strong-cyan;
+    line-height: 1;
+  }
+
+  &__output-btn {
+    width: 100%;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 0;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $light-cyan;
+    }
+  }
+}
+
+.attribution {
+  font-size: $font-size;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
