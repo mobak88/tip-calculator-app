@@ -8,8 +8,6 @@ const clearOuptutBtn = document.querySelector('.main__output-btn');
 const billErrMsg = document.getElementsByClassName('main__input-err-msg')[0];
 const numberOfPeopleErrMsg = document.getElementsByClassName('main__input-err-msg')[1];
 
-console.log(tipBtn);
-
 const calculateTip = (input) => {
     const calculatedTipAmount = `${(input * bill.value / 100)}`;
     tipAmount.textContent = `$${parseFloat(calculatedTipAmount / numberOfPeople.value).toFixed(2)}`;
@@ -23,6 +21,15 @@ const calculateTotal = (input) => {
 const removeActiveBtn = () => {
     tipBtn.forEach(btn => {
         btn.classList.remove('main__tip-btn--active');
+    });
+};
+
+const enableResetBtn = () => {
+    clearOuptutBtn.classList.add('main__output-btn--active');
+    clearOuptutBtn.addEventListener('click', () => {
+        tipAmount.textContent = '$0';
+        total.textContent = '$0';
+        clearOuptutBtn.classList.remove('main__output-btn--active');
     });
 };
 
@@ -55,6 +62,7 @@ tipBtn.forEach((btn, i) => {
             document.getElementsByClassName('main__tip-btn')[i].classList.add('main__tip-btn--active');
             calculateTip(newBtn);
             calculateTotal(newBtn);
+            enableResetBtn();
         }
     });
 });
@@ -91,6 +99,7 @@ tipAmountCustom.addEventListener('keyup', (e) => {
         removeActiveBtn();
         calculateTip(tipAmountCustom.value);
         calculateTotal(tipAmountCustom.value);
+        enableResetBtn();
     }
 });
 
@@ -100,9 +109,4 @@ tipAmountCustom.addEventListener('focus', () => {
 
 tipAmountCustom.addEventListener('focusout', () => {
     tipAmountCustom.placeholder = 'Custom';
-});
-
-clearOuptutBtn.addEventListener('click', () => {
-    tipAmount.textContent = '$0';
-    total.textContent = '$0';
 });

@@ -421,22 +421,27 @@ footer {
 
 .main__output-btn {
   width: 100%;
-  background-color: #26c0ab;
-  color: #00494d;
   text-transform: uppercase;
   border: none;
   padding: 1rem 0;
   font-size: 2rem;
   border-radius: 0.4rem;
+  background-color: #006b70;
+  color: #00494d;
+}
+
+.main__output-btn--active {
+  background-color: #26c0ab;
+  color: #00494d;
   cursor: pointer;
 }
 
-.main__output-btn:hover {
+.main__output-btn--active:hover {
   background-color: #c5e4e7;
 }
 
 @media only screen and (max-width: 900px) {
-  .main__output-btn:hover {
+  .main__output-btn--active:hover {
     background-color: #26c0ab;
     color: #00494d;
   }

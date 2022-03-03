@@ -236,23 +236,28 @@ footer {
 
   &__output-btn {
     width: 100%;
-    background-color: $strong-cyan;
-    color: $very-dark-cyan;
     text-transform: uppercase;
     border: none;
     padding: 1rem 0;
     font-size: 2rem;
     border-radius: 0.4rem;
-    cursor: pointer;
+    background-color: hsl(183, 100%, 22%);
+    color: $very-dark-cyan;
 
-    &:hover {
-      background-color: $light-cyan;
-    }
+    &--active {
+      background-color: $strong-cyan;
+      color: $very-dark-cyan;
+      cursor: pointer;
 
-    @include responsive(phone) {
       &:hover {
-        background-color: $strong-cyan;
-        color: $very-dark-cyan;
+        background-color: $light-cyan;
+      }
+
+      @include responsive(phone) {
+        &:hover {
+          background-color: $strong-cyan;
+          color: $very-dark-cyan;
+        }
       }
     }
   }
