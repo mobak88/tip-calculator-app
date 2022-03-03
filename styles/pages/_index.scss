@@ -170,6 +170,10 @@ footer {
     background-color: $light-grayish-cyan;
     text-align: center;
     color: $very-dark-cyan;
+
+    &::placeholder {
+      color: $dark-cyan;
+    }
   }
 
   &__tip-btn,

@@ -94,6 +94,14 @@ tipAmountCustom.addEventListener('keyup', (e) => {
     }
 });
 
+tipAmountCustom.addEventListener('focus', () => {
+    tipAmountCustom.placeholder = '';
+});
+
+tipAmountCustom.addEventListener('focusout', () => {
+    tipAmountCustom.placeholder = 'Custom';
+});
+
 clearOuptutBtn.addEventListener('click', () => {
     tipAmount.textContent = '$0';
     total.textContent = '$0';

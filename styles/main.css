@@ -327,6 +327,22 @@ footer {
   color: #00494d;
 }
 
+.main__tip-input::-webkit-input-placeholder {
+  color: #5e7a7d;
+}
+
+.main__tip-input:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+.main__tip-input::-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+.main__tip-input::placeholder {
+  color: #5e7a7d;
+}
+
 .main__tip-btn, .main__tip-input, .main__label {
   cursor: pointer;
 }
