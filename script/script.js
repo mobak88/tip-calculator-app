@@ -33,29 +33,25 @@ const enableResetBtn = () => {
     });
 };
 
+const displayErr = (el, errMsg) => {
+    if (parseInt(el.value) === 0 || el.value === '') {
+        el.classList.add('main__input-field--err');
+        errMsg.classList.remove('main__input-err-msg--hidden');
+    } else {
+        el.classList.remove('main__input-field--err');
+        el.classList.add('main__input-field--success');
+        errMsg.classList.add('main__input-err-msg--hidden');
+    }
+};
+
 tipBtn.forEach((btn, i) => {
     const newBtn = btn.textContent.trim().slice(0, -1);
 
     btn.addEventListener('click', (e) => {
         e.preventDefault();
 
-        if (parseInt(bill.value) === 0 || bill.value === '') {
-            bill.classList.add('main__input-field--err');
-            billErrMsg.classList.remove('main__input-err-msg--hidden');
-        } else {
-            bill.classList.remove('main__input-field--err');
-            bill.classList.add('main__input-field--success');
-            billErrMsg.classList.add('main__input-err-msg--hidden');
-        }
-
-        if (parseInt(numberOfPeople.value) === 0 || numberOfPeople.value === '') {
-            numberOfPeople.classList.add('main__input-field--err');
-            numberOfPeopleErrMsg.classList.remove('main__input-err-msg--hidden');
-        } else {
-            numberOfPeople.classList.remove('main__input-field--err');
-            numberOfPeople.classList.add('main__input-field--success');
-            numberOfPeopleErrMsg.classList.add('main__input-err-msg--hidden');
-        }
+        displayErr(bill, billErrMsg);
+        displayErr(numberOfPeople, numberOfPeopleErrMsg);
 
         if (parseInt(bill.value) !== 0 && bill.value !== '' && parseInt(numberOfPeople.value) !== 0 && numberOfPeople.value !== '') {
             removeActiveBtn();
@@ -70,23 +66,8 @@ tipBtn.forEach((btn, i) => {
 tipAmountCustom.addEventListener('keyup', (e) => {
     e.preventDefault();
 
-    if (parseInt(bill.value) === 0 || bill.value === '') {
-        bill.classList.add('main__input-field--err');
-        billErrMsg.classList.remove('main__input-err-msg--hidden');
-    } else {
-        bill.classList.remove('main__input-field--err');
-        bill.classList.add('main__input-field--success');
-        billErrMsg.classList.add('main__input-err-msg--hidden');
-    }
-
-    if (parseInt(numberOfPeople.value) === 0 || numberOfPeople.value === '') {
-        numberOfPeople.classList.add('main__input-field--err');
-        numberOfPeopleErrMsg.classList.remove('main__input-err-msg--hidden');
-    } else {
-        numberOfPeople.classList.remove('main__input-field--err');
-        numberOfPeople.classList.add('main__input-field--success');
-        numberOfPeopleErrMsg.classList.add('main__input-err-msg--hidden');
-    }
+    displayErr(bill, billErrMsg);
+    displayErr(numberOfPeople, numberOfPeopleErrMsg);
 
     if (parseInt(tipAmountCustom.value) === 0 || tipAmountCustom.value === '') {
         tipAmountCustom.classList.add('err');
