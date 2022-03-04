@@ -54,7 +54,7 @@ tipBtn.forEach((btn, i) => {
         } else {
             numberOfPeople.classList.remove('main__input-field--err');
             numberOfPeople.classList.add('main__input-field--success');
-            billErrMsg.classList.add('main__input-err-msg--hidden');
+            numberOfPeopleErrMsg.classList.add('main__input-err-msg--hidden');
         }
 
         if (parseInt(bill.value) !== 0 && bill.value !== '' && parseInt(numberOfPeople.value) !== 0 && numberOfPeople.value !== '') {
@@ -85,7 +85,7 @@ tipAmountCustom.addEventListener('keyup', (e) => {
     } else {
         numberOfPeople.classList.remove('main__input-field--err');
         numberOfPeople.classList.add('main__input-field--success');
-        billErrMsg.classList.add('main__input-err-msg--hidden');
+        numberOfPeopleErrMsg.classList.add('main__input-err-msg--hidden');
     }
 
     if (parseInt(tipAmountCustom.value) === 0 || tipAmountCustom.value === '') {
