@@ -27,8 +27,8 @@ const removeActiveBtn = () => {
 const enableResetBtn = () => {
     clearOuptutBtn.classList.add('main__output-btn--active');
     clearOuptutBtn.addEventListener('click', () => {
-        tipAmount.textContent = '$0';
-        total.textContent = '$0';
+        tipAmount.textContent = '$0.00';
+        total.textContent = '$0.00';
         clearOuptutBtn.classList.remove('main__output-btn--active');
     });
 };
